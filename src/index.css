@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  src: url("assets/fonts/regular.ttf");
+  font-family: regular;
+}
+@font-face {
+  src: url("assets/fonts/medium.ttf");
+  font-family: medium;
+}
+@font-face {
+  src: url("assets/fonts/bold.ttf");
+  font-family: bold;
+}
+@font-face {
+  src: url("assets/fonts/capsMedium.woff2");
+  font-family: capsMedium;
+}
+body {
+  font-family: capsMedium;
+  letter-spacing: 1.5px;
+}
