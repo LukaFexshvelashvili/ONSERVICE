@@ -1,11 +1,14 @@
-import Navbar from "../assets/components/Navbar";
-import SideBar from "../assets/components/SideBar";
+import NavBar from "../components/NavBar";
+import SideBar from "../components/SideBar";
+import Home from "../pages/Home/Home";
 
 function App() {
   return (
     <Layout>
       <SideBar />
-      <Content></Content>
+      <Content>
+        <Home />
+      </Content>
     </Layout>
   );
 }
@@ -19,7 +22,7 @@ function Layout({ children }: any) {
 function Content({ children }: any) {
   return (
     <div className="flex flex-col py-[25px] px-[25px] flex-1">
-      <Navbar />
+      <NavBar />
       {children}
     </div>
   );

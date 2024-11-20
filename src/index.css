@@ -3,6 +3,15 @@
 @tailwind utilities;
 
 @font-face {
+  src: url("assets/fonts/bpg_banner.ttf");
+  font-family: bpg;
+}
+@font-face {
+  src: url("assets/fonts/bpg_banner_caps.ttf");
+  font-family: bpgcaps;
+}
+
+@font-face {
   src: url("assets/fonts/regular.ttf");
   font-family: regular;
 }
@@ -21,4 +30,10 @@
 body {
   font-family: capsMedium;
   letter-spacing: 1.5px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

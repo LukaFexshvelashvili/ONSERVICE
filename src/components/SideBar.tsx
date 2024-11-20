@@ -5,7 +5,7 @@ import {
   PhoneIcon,
   StackedIcon,
   UserIcon,
-} from "../icons/icons";
+} from "../assets/icons/icons";
 
 function SideBar() {
   const [rowActive, setRowActive] = useState(0);

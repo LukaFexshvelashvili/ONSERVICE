@@ -5,11 +5,14 @@ export default {
     extend: {
       colors: {
         main: "#2196F3",
+        mainClear: "rgba(33, 149, 243, 0.1)",
+        mainClearHover: "rgba(33, 149, 243, 0.15)",
         mainHover: "#339bf0",
         secondMain: "#40A9FD",
         bodyBg: "#F8F8F8",
         bg: "#FFFFFF",
         black: "#494949",
+        black2: "#6e6e6e",
         desc: "rgba(73, 73, 73, 0.6)",
         white: "#FFFFFF",
         whiteHover: "#fcfcfc",
@@ -19,7 +22,7 @@ export default {
         green: "#34D675",
         yellow: "#FFCE1F",
         red: "#F72585",
-        lineDecor: "#EEEEEE",
+        lineDecor: "#F4F4F4",
       },
       boxShadow: {
         def: "0px 4px 30px rgba(0, 0, 0, 0.02)",
@@ -29,6 +32,8 @@ export default {
         medium: "medium",
         bold: "bold",
         capsMedium: "capsMedium",
+        bpg: "bpg",
+        bpgcaps: "bpgcaps",
       },
       borderRadius: {
         info: "15px",
