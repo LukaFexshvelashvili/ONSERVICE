@@ -6,6 +6,7 @@ import {
   StackedIcon,
   UserIcon,
 } from "../assets/icons/icons";
+import OutsideClick from "./globals/OutsideClick";
 
 export default function NavBar() {
   return (
@@ -24,7 +25,10 @@ export function NavActions() {
   const [activeBubble, setActiveBubble] = useState<null | string>(null);
 
   return (
-    <div className="flex gap-[15px] items-center relative">
+    <OutsideClick
+      className="flex gap-[15px] items-center relative"
+      onOutsideClick={() => setActiveBubble(null)}
+    >
       <>
         <NavButton
           icon={ChatIcon}
@@ -56,7 +60,7 @@ export function NavActions() {
       <div
         className={`action_bar absolute transition-all duration-200 ${
           activeBubble == null ? "invisible opacity-0" : "visible opacity-100"
-        } right-0 w-[200px] rounded-info shadow-def p-4 py-4 flex flex-col items-center bg-white top-[55px]`}
+        } right-0 w-[200px] rounded-info shadow-def flex flex-col items-center bg-white top-[55px]`}
       >
         {(() => {
           switch (activeBubble) {
@@ -71,13 +75,13 @@ export function NavActions() {
           }
         })()}
       </div>
-    </div>
+    </OutsideClick>
   );
 }
 
 export function ChatBar() {
   return (
-    <div className="flex flex-col text-black2 text-[14px] tracking-wide w-[170px]">
+    <div className="flex flex-col text-black2 text-[14px] tracking-wide w-[170px] py-4">
       <div className="flex items-center gap-2 mx-auto select-none flex-col justify-center text-center">
         <div className="rounded-[8px] bg-main h-[28px] aspect-square"></div>
         დახმარების ცენტრთან ჩათის დაწყება
@@ -92,23 +96,25 @@ export function ChatBar() {
 
 export function NotificationsBar() {
   return (
-    <div className="flex flex-col text-black2 text-[14px] tracking-wide w-[170px] gap-2 max-h-[200px]">
-      <div className="flex items-center gap-3 mx-auto select-none cursor-pointer w-full p-2 rounded-[8px] relative transition-colors hover:bg-mainClearHover bg-mainClear">
-        <div className="absolute top-[-2px] right-[-2px] h-2 w-2 rounded-full bg-main"></div>
-        <div className="rounded-[8px] bg-main h-[24px] aspect-square"></div>
-        შეტყობინება
-      </div>
-      <div className="flex items-center gap-3 mx-auto select-none cursor-pointer w-full p-2 rounded-[8px] relative transition-colors hover:bg-whiteHover">
-        <div className="rounded-[8px] bg-main h-[24px] aspect-square"></div>
-        შეტყობინება
-      </div>
-      <div className="flex items-center gap-3 mx-auto select-none cursor-pointer w-full p-2 rounded-[8px] relative transition-colors hover:bg-whiteHover">
-        <div className="rounded-[8px] bg-main h-[24px] aspect-square"></div>
-        შეტყობინება
-      </div>
-      <div className="flex items-center gap-3 mx-auto select-none cursor-pointer w-full p-2 rounded-[8px] relative transition-colors hover:bg-whiteHover">
-        <div className="rounded-[8px] bg-main h-[24px] aspect-square"></div>
-        შეტყობინება
+    <div className=" text-black2 text-[14px] tracking-wide w-[170px] py-4">
+      <div className="flex flex-col gap-2 max-h-[200px]">
+        <div className="flex items-center gap-3 mx-auto select-none cursor-pointer w-full p-2 rounded-[8px] relative transition-colors hover:bg-mainClearHover bg-mainClear">
+          <div className="absolute top-[-2px] right-[-2px] h-2 w-2 rounded-full bg-main"></div>
+          <div className="rounded-[8px] bg-main h-[24px] aspect-square"></div>
+          შეტყობინება
+        </div>
+        <div className="flex items-center gap-3 mx-auto select-none cursor-pointer w-full p-2 rounded-[8px] relative transition-colors hover:bg-whiteHover">
+          <div className="rounded-[8px] bg-main h-[24px] aspect-square"></div>
+          შეტყობინება
+        </div>
+        <div className="flex items-center gap-3 mx-auto select-none cursor-pointer w-full p-2 rounded-[8px] relative transition-colors hover:bg-whiteHover">
+          <div className="rounded-[8px] bg-main h-[24px] aspect-square"></div>
+          შეტყობინება
+        </div>
+        <div className="flex items-center gap-3 mx-auto select-none cursor-pointer w-full p-2 rounded-[8px] relative transition-colors hover:bg-whiteHover">
+          <div className="rounded-[8px] bg-main h-[24px] aspect-square"></div>
+          შეტყობინება
+        </div>
       </div>
     </div>
   );
@@ -116,7 +122,7 @@ export function NotificationsBar() {
 
 export function ProfileBar() {
   return (
-    <div className="flex flex-col text-black text-[15px] tracking-wide w-[150px] py-2">
+    <div className="flex flex-col text-black text-[15px] tracking-wide w-[150px] py-6">
       <div className="flex items-center gap-3 mx-auto select-none cursor-pointer">
         <div className="rounded-[8px] bg-main h-[24px] aspect-square"></div>
         ლუკა

@@ -13,6 +13,7 @@ export default {
         bg: "#FFFFFF",
         black: "#494949",
         black2: "#6e6e6e",
+        inputBg: "#F8F8F8",
         desc: "rgba(73, 73, 73, 0.6)",
         white: "#FFFFFF",
         whiteHover: "#fcfcfc",

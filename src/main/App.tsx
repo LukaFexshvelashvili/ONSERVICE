@@ -1,6 +1,8 @@
 import NavBar from "../components/NavBar";
 import SideBar from "../components/SideBar";
 import Home from "../pages/Home/Home";
+import Orders from "../pages/Orders/Orders";
+import Profile from "../pages/Profile/Profile";
 
 function App() {
   return (
@@ -8,6 +10,8 @@ function App() {
       <SideBar />
       <Content>
         <Home />
+        {/* <Profile /> */}
+        {/* <Orders /> */}
       </Content>
     </Layout>
   );
@@ -23,7 +27,7 @@ function Content({ children }: any) {
   return (
     <div className="flex flex-col py-[25px] px-[25px] flex-1">
       <NavBar />
-      {children}
+      <main className="mt-12">{children}</main>
     </div>
   );
 }
