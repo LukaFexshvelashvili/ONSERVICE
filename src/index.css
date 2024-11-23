@@ -47,3 +47,7 @@ body {
 ::-webkit-scrollbar-thumb {
   @apply bg-main;
 }
+
+.linear_main {
+  @apply bg-gradient-to-r from-main to-secondMain;
+}
