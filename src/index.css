@@ -30,6 +30,11 @@
 .flickfx {
   -webkit-transform: translateZ(0);
 }
+
+/* DEBUG */
+* {
+  /* border: 2px solid red; */
+}
 body {
   font-family: capsMedium;
   letter-spacing: 1.5px;

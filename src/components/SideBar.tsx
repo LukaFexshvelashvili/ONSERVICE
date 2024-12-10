@@ -10,7 +10,7 @@ import {
 function SideBar() {
   const [rowActive, setRowActive] = useState(0);
   return (
-    <div className="w-[80px] h-[100vh] min-h-[350px] top-0 sticky bg-gradient-to-r from-main to-secondMain py-[25px] flex justify-center select-none">
+    <div className="mobile:hidden w-[80px] min-w-[80px] h-[100vh] min-h-[350px] sticky top-0 bg-gradient-to-r from-main to-secondMain py-[25px] flex justify-center select-none">
       <div className="flex flex-col justify-between gap-3.5 ">
         <div className="first_row flex items-center flex-col gap-3.5">
           {firstRow.map((e: Trow) => (

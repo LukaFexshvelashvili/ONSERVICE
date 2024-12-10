@@ -4,7 +4,7 @@ export default function Card(props: {
   alt: string;
 }) {
   return (
-    <div className="flickfx group rounded-cards h-[185px] w-[370px] bg-white shadow-def flex- flex-col overflow-hidden select-none transition-colors hover:bg-whiteHover cursor-pointer">
+    <div className="flickfx group rounded-cards h-[185px] w-[370px] min-w-[350px] bg-white shadow-def flex- flex-col overflow-hidden select-none transition-colors hover:bg-whiteHover cursor-pointer">
       <div className=" image_side h-[140px] w-full relative">
         <img
           src={props.img}

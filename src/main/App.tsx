@@ -8,13 +8,14 @@ import Profile from "../pages/Profile/Profile";
 function App() {
   return (
     <Layout>
-      {/* <SideBar /> */}
-      {/* <Content> */}
-      {/* <Home /> */}
-      {/* <Profile /> */}
-      {/* <Orders /> */}
-      {/* </Content> */}
-      <Authentication />
+      <SideBar />
+
+      <Content>
+        <Home />
+        {/* <Profile /> */}
+        {/* <Orders /> */}
+      </Content>
+      {/* <Authentication /> */}
     </Layout>
   );
 }
@@ -27,9 +28,10 @@ function Layout({ children }: any) {
 
 function Content({ children }: any) {
   return (
-    <div className="flex flex-col py-[25px] px-[25px] flex-1">
-      {/* <NavBar /> */}
-      <main className="mt-12">{children}</main>
+    <div className="flex flex-col relative py-[25px] px-[25px] flex-1 overflow-hidden w-full">
+      <NavBar />
+
+      <main className="mt-16 ">{children}</main>
     </div>
   );
 }

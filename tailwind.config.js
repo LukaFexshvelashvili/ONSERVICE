@@ -32,6 +32,7 @@ export default {
       },
       boxShadow: {
         def: "0px 4px 30px rgba(0, 0, 0, 0.02)",
+        defH: "0px 4px 25px rgba(0, 0, 0, 0.08)",
       },
       fontFamily: {
         regular: "regular",
@@ -44,6 +45,11 @@ export default {
       borderRadius: {
         info: "15px",
         cards: "20px",
+      },
+      screens: {
+        medium: { max: "1000px" },
+        mobile: { max: "600px" },
+        mobileSm: { max: "500px" },
       },
     },
   },
