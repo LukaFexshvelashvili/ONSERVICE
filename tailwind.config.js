@@ -14,8 +14,9 @@ export default {
         black: "#494949",
         blackF: "rgba(73, 73, 73, 0.9)",
         black2: "#6e6e6e",
-        inputBg: "#FBFBFB",
-        inputBgActive: "#f8f8f8",
+        black3: "#b8b8b8",
+        inputBg: "rgb(243, 243, 243)",
+        inputBgActive: "rgb(241, 241, 241)",
 
         inputLabel: "rgba(73, 73, 73, 0.6)",
         desc: "rgba(73, 73, 73, 0.6)",
@@ -47,6 +48,7 @@ export default {
         cards: "20px",
       },
       screens: {
+        authChange: { max: "1200px" },
         medium: { max: "1000px" },
         ordersChange: { max: "900px" },
         mobile: { max: "600px" },

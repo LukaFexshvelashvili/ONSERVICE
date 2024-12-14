@@ -4,12 +4,12 @@ export default function Register() {
   return (
     <form
       onSubmit={(e) => e.preventDefault()}
-      className="font-medium tracking-wide"
+      className="font-medium tracking-wide w-[90%] max-w-[400px]"
     >
-      <h1 className="text-[38px] font-medium text-center text-blackF">
+      <h1 className="text-[38px] font-medium text-center text-blackF mobileSm:text-[32px]">
         ანგარიშის შექმნა
       </h1>
-      <div className="flex flex-col gap-6 mt-10 w-[400px] select-none">
+      <div className="flex flex-col gap-6 mt-10 w-full select-none authChange:mt-14">
         <div className=" flex items-center gap-5 ">
           <InputBlock title="სახელი" placeholder="სახელი" />
           <InputBlock title="გვარი" placeholder="გვარი" />
@@ -28,7 +28,7 @@ export default function Register() {
           </span>
         </div>
       </div>
-      <button className="linear_main tracking-wide h-[45px] w-full text-white mt-10 transition-opacity hover:opacity-95 font-medium rounded-[10px]">
+      <button className="linear_main tracking-wide h-[45px] w-full text-white mt-10 transition-opacity hover:opacity-95 font-medium rounded-[10px] authChange:mt-14">
         რეგისტრაცია
       </button>
       <p className=" text-inputLabel text-[14px] text-center mt-5">
