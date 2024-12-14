@@ -14,13 +14,13 @@ export default function OrderCard({
   order_status: number;
 }) {
   return (
-    <div className="flex items-center text-[14px] h-[50px] w-full rounded-info shadow-def bg-white px-10">
+    <div className="flex items-center text-[14px] h-[50px] w-full rounded-info shadow-def bg-white px-10 ordersChange:flex-col ordersChange:h-auto ordersChange:py-5 ordersChange:text-center ordersChange:[&>div]:w-full ordersChange:gap-2">
       <div className="w-[15%] text-desc">#{id}</div>
       <div className="w-[20%] text-black">{order_type}</div>
       <div className="w-[15%] text-black2">{order_date}</div>
       <div className="w-[15%] text-black2">{order_date_deadline}</div>
       <div className="w-[15%] text-main">{order_price}₾</div>
-      <div className="w-[20%] flex items-center text-black2 justify-end">
+      <div className="w-[20%] flex items-center text-black2 justify-end ordersChange:justify-center">
         {get_order_status(order_status)}
       </div>
     </div>

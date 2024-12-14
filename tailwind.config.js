@@ -48,6 +48,7 @@ export default {
       },
       screens: {
         medium: { max: "1000px" },
+        ordersChange: { max: "900px" },
         mobile: { max: "600px" },
         mobileSm: { max: "500px" },
       },

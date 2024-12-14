@@ -228,7 +228,7 @@ const ResponsiveNavBar = () => {
           ლუკა
         </div>
         <div className=" bg-lineDecor h-[3px] w-[40px] rounded-md my-4"></div>
-        <div className="flex flex-col gap-5 text-black2 w-[80%] max-w-[280px] mt-10 font-medium text-[16px]">
+        <div className="flex flex-col gap-5 text-black2 w-[80%] max-w-[320px] mt-10 font-medium text-[15px]">
           {RespoRow.map((e: Trow) => (
             <div key={e.id} className="flex gap-3 items-center">
               <e.icon
@@ -242,22 +242,22 @@ const ResponsiveNavBar = () => {
             </div>
           ))}
         </div>
-        <div className="flex gap-4 flex-col w-[90%] max-w-[320px] mt-auto">
-          <button className="h-[50px] w-full flex items-center gap-4 bg-[rgba(52,214,117,0.05)] text-[#34D675] rounded-2xl font-medium ">
-            <div className="h-[50px] aspect-square flex justify-center items-center bg-[#34D675] rounded-2xl">
-              <PhoneIcon className="h-[24px] aspect-square" />
+        <div className="flex gap-5 flex-col w-[90%] max-w-[320px] mt-auto">
+          <button className="h-[40px] w-full flex items-center gap-4 bg-[rgba(52,214,117,0.05)] text-[#34D675] rounded-xl font-medium text-[14px]">
+            <div className="h-[40px] aspect-square flex justify-center items-center bg-[#34D675] rounded-xl">
+              <PhoneIcon className="h-[20px] aspect-square" />
             </div>
             დარეკვა
           </button>
-          <button className="h-[50px] w-full flex items-center gap-4 bg-[rgba(64,171,253,0.05)] text-[#40AAFD] rounded-2xl font-medium ">
-            <div className="h-[50px] aspect-square flex justify-center items-center bg-[#40AAFD] rounded-2xl">
-              <FacebookIcon className="h-[24px] aspect-square flex justify-center items-center" />
+          <button className="h-[40px] w-full flex items-center gap-4 bg-[rgba(64,171,253,0.05)] text-[#40AAFD] rounded-xl font-medium text-[14px]">
+            <div className="h-[40px] aspect-square flex justify-center items-center bg-[#40AAFD] rounded-xl">
+              <FacebookIcon className="h-[20px] aspect-square flex justify-center items-center" />
             </div>
             Facebook გვერდი
           </button>
-          <button className="h-[50px] w-full flex items-center gap-4 bg-[rgba(247,37,132,0.05)] text-[#F72585] rounded-2xl font-medium ">
-            <div className="h-[50px] aspect-square flex justify-center items-center bg-[#F72585] rounded-2xl">
-              <InstagramIcon className="h-[24px] aspect-square" />
+          <button className="h-[40px] w-full flex items-center gap-4 bg-[rgba(247,37,132,0.05)] text-[#F72585] rounded-xl font-medium text-[14px]">
+            <div className="h-[40px] aspect-square flex justify-center items-center bg-[#F72585] rounded-xl">
+              <InstagramIcon className="h-[20px] aspect-square" />
             </div>
             Instagram გვერდი
           </button>

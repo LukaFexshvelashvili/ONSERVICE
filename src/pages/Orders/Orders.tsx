@@ -3,10 +3,12 @@ import OrderCard from "./OrderCard";
 export default function Orders() {
   return (
     <>
-      <h1 className="text-black text-[52px] leading-[64px] flex-1">
+      <h1 className="text-black text-[52px] leading-[64px] flex-1 mobile:text-[46px]">
         გამარჯობა, <span className="text-main">ლუკა </span> <br />
       </h1>
-      <p className="mt-5 text-desc text-[26px]">თქვენი შეკვეთები</p>
+      <p className="mt-5 text-desc text-[26px] mobile:text-center mobile:text-[18px] mobile:mt-3">
+        თქვენი შეკვეთები
+      </p>
       <div className="line bg-lineDecor h-[4px] w-[150px] mx-auto mt-5 rounded-md"></div>
       <div className="mt-6 flex flex-col gap-2">
         <OrderCard
