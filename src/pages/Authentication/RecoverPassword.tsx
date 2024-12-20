@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom";
 import InputBlock from "../../components/globals/InputBlock";
 
 export default function RecoverPassword() {
   return (
     <form
       onSubmit={(e) => e.preventDefault()}
-      className="font-medium tracking-wide w-[90%] max-w-[400px]"
+      className="font-medium tracking-wide w-[90%] max-w-[400px] text-center"
     >
       <h1 className="text-[38px] font-medium text-center text-blackF mobileSm:text-[32px]">
         პაროლის აღდგენა
@@ -23,6 +24,12 @@ export default function RecoverPassword() {
       <button className="linear_main tracking-wide h-[45px] w-full text-white mt-10 transition-opacity hover:opacity-95 font-medium rounded-[10px] authChange:mt-14">
         კოდის მოთხოვნა
       </button>
+      <Link
+        to={"/auth/login"}
+        className="text-main cursor-pointer transition-colors hover:text-secondMain  inline-block  text-center mt-4 text-[14px]"
+      >
+        უკან დაბრუნება
+      </Link>
     </form>
   );
 }

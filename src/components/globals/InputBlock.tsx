@@ -3,7 +3,7 @@ export default function InputBlock(props: {
   placeholder: string;
 }) {
   return (
-    <div className="flex flex-col gap-1.5">
+    <div className="flex flex-col gap-3">
       <p className="text-inputLabel font-medium text-[14px] tracking-wide">
         {props.title}
       </p>

@@ -38,7 +38,7 @@ export default function OrderCard({
         <span className="hidden ordersChange:block text-black3">ფასი:</span>{" "}
         {order_price}₾
       </div>
-      <div className="w-[20%] flex flex-col items-center text-black2 justify-end ordersChange:justify-center">
+      <div className="w-[20%] flex ordersChange:flex-col items-center text-black2 justify-end ordersChange:justify-center">
         <span className="hidden ordersChange:block text-black3">სტატუსი:</span>{" "}
         {get_order_status(order_status)}
       </div>

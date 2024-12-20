@@ -12,6 +12,7 @@ import {
   UserIcon,
 } from "../assets/icons/icons";
 import OutsideClick from "./globals/OutsideClick";
+import { Link } from "react-router-dom";
 
 export default function NavBar() {
   return (
@@ -73,7 +74,7 @@ export function NavActions() {
         {(() => {
           switch (activeBubble) {
             case "PROFILE":
-              return <ProfileBar />;
+              return <ProfileBar setActiveBubble={setActiveBubble} />;
             case "NOTIFICATIONS":
               return <NotificationsBar />;
             case "CHAT":
@@ -128,7 +129,7 @@ export function NotificationsBar() {
   );
 }
 
-export function ProfileBar() {
+export function ProfileBar(props: { setActiveBubble: Function }) {
   return (
     <div className="flex flex-col text-black text-[15px] tracking-wide w-[150px] py-6">
       <div className="flex items-center gap-3 mx-auto select-none cursor-pointer">
@@ -137,18 +138,30 @@ export function ProfileBar() {
       </div>
       <div className="line bg-lineDecor h-[2px] w-[30px] mx-auto my-4"></div>
       <div className="flex flex-col gap-[14px] tracking-widest  text-[14px] text-black2 select-none mt-1">
-        <div className="flex items-center gap-2 cursor-pointer w-min">
-          <UserIcon className="h-[18px] aspect-square [&>path]:fill-black2" />{" "}
+        <Link
+          to={"/profile"}
+          onClick={() => props.setActiveBubble(null)}
+          className="flex items-center gap-2 cursor-pointer w-min"
+        >
+          <UserIcon className="h-[18px] aspect-square translate-y-[-2px] [&>path]:fill-black2" />{" "}
           პროფილი
-        </div>
-        <div className="flex items-center gap-2 cursor-pointer w-min">
-          <StackedIcon className="h-[18px] aspect-square [&>path]:fill-black2" />{" "}
+        </Link>
+        <Link
+          to={"/orders"}
+          onClick={() => props.setActiveBubble(null)}
+          className="flex items-center gap-2 cursor-pointer w-min"
+        >
+          <StackedIcon className="h-[18px] aspect-square translate-y-[-2px] [&>path]:fill-black2" />{" "}
           შეკვეთები
-        </div>
-        <div className="flex items-center gap-2 cursor-pointer w-min">
-          <LogoutIcon className="h-[18px] aspect-square [&>path]:stroke-black2" />{" "}
+        </Link>
+        <Link
+          to={"/logout"}
+          onClick={() => props.setActiveBubble(null)}
+          className="flex items-center gap-2 cursor-pointer w-min"
+        >
+          <LogoutIcon className="h-[18px] aspect-square translate-y-[-2px] [&>path]:stroke-black2" />{" "}
           გასვლა
-        </div>
+        </Link>
       </div>
     </div>
   );

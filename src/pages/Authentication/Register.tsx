@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import InputBlock from "../../components/globals/InputBlock";
 
 export default function Register() {
@@ -33,9 +34,12 @@ export default function Register() {
       </button>
       <p className=" text-inputLabel text-[14px] text-center mt-5">
         უკვე გაქვთ ანგარიში?{" "}
-        <span className="text-main cursor-pointer transition-colors hover:text-secondMain">
+        <Link
+          to={"/auth/login"}
+          className="text-main cursor-pointer transition-colors hover:text-secondMain"
+        >
           ავტორიზაცია
-        </span>
+        </Link>
       </p>
     </form>
   );
