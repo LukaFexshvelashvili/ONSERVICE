@@ -1,11 +1,3 @@
-import { act, useState } from "react";
-import {
-  Icon,
-  MoonIcon,
-  PhoneIcon,
-  StackedIcon,
-  UserIcon,
-} from "../assets/icons/icons";
 import NavBar from "../components/NavBar";
 import SideBar from "../components/SideBar";
 import Authentication from "../pages/Authentication/Authentication";
@@ -42,7 +34,7 @@ function SideBarLayout() {
   return (
     <>
       <SideBar />
-      <div className="flex flex-col relative py-[25px] px-[25px] flex-1 overflow-hidden w-full mobile:pb-[65px]">
+      <div className="flex flex-col relative py-[25px] px-[25px] flex-1 overflow-hidden w-full mobile:pb-[65px] mobile:px-[10px]">
         <NavBar />
         <main className="mt-16 ">
           <Outlet />

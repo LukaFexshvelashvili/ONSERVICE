@@ -2,7 +2,6 @@ import { useState } from "react";
 import {
   ChatIcon,
   FacebookIcon,
-  Icon,
   IconBlue,
   InstagramIcon,
   LogoutIcon,
@@ -16,7 +15,7 @@ import { Link } from "react-router-dom";
 
 export default function NavBar() {
   return (
-    <nav className="fixed flex items-center justify-between w-[calc(100%-130px)] mobile:w-full mobile:left-0 mobile:px-5 mobile:top-5 z-10">
+    <nav className="fixed flex items-center justify-between w-[calc(100%-130px)] mobile:w-full mobile:left-0 mobile:px-5 mobile:top-5 z-10 mobile:px-[10px]">
       <div className="rounded-info text-black bg-white px-6 h-[40px] text-[16px] flex justify-center items-center shadow-defH select-none cursor-pointer transition-colors hover:bg-whiteHover">
         <span className="text-main mr-1.5">ონ</span> სერვისი
       </div>
@@ -243,7 +242,12 @@ const ResponsiveNavBar = () => {
         <div className=" bg-lineDecor h-[3px] w-[40px] rounded-md my-4"></div>
         <div className="flex flex-col gap-5 text-black2 w-[80%] max-w-[320px] mt-10 font-medium text-[15px]">
           {RespoRow.map((e: Trow) => (
-            <div key={e.id} className="flex gap-3 items-center">
+            <Link
+              to={e.link}
+              onClick={() => setIsActive(false)}
+              key={e.id}
+              className="flex gap-3 items-center"
+            >
               <e.icon
                 className={` ${
                   e.type == "fill"
@@ -252,7 +256,7 @@ const ResponsiveNavBar = () => {
                 } `}
               />
               {e.title}
-            </div>
+            </Link>
           ))}
         </div>
         <div className="flex gap-5 flex-col w-[90%] max-w-[320px] mt-auto">
@@ -296,7 +300,7 @@ const RespoRow: Trow[] = [
       />
     ),
     type: "fill",
-    link: "/",
+    link: "/profile",
   },
   {
     id: 1,
@@ -307,7 +311,7 @@ const RespoRow: Trow[] = [
       />
     ),
     type: "fill",
-    link: "/",
+    link: "/notifications",
   },
   {
     id: 2,
@@ -319,7 +323,7 @@ const RespoRow: Trow[] = [
     ),
     type: "stroke",
 
-    link: "/",
+    link: "/chat",
   },
   {
     id: 3,
@@ -331,7 +335,7 @@ const RespoRow: Trow[] = [
     ),
     type: "fill",
 
-    link: "/",
+    link: "/orders",
   },
   {
     id: 4,
@@ -343,6 +347,6 @@ const RespoRow: Trow[] = [
     ),
     type: "stroke",
 
-    link: "/",
+    link: "/logout",
   },
 ];
