@@ -16,9 +16,12 @@ import { Link } from "react-router-dom";
 export default function NavBar() {
   return (
     <nav className="fixed flex items-center justify-between w-[calc(100%-130px)] mobile:w-full mobile:left-0 mobile:px-5 mobile:top-5 z-10 mobile:px-[10px]">
-      <div className="rounded-info text-black bg-white px-6 h-[40px] text-[16px] flex justify-center items-center shadow-defH select-none cursor-pointer transition-colors hover:bg-whiteHover">
+      <Link
+        to={"/"}
+        className="rounded-info text-black bg-white px-6 h-[40px] text-[16px] flex justify-center items-center shadow-defH select-none cursor-pointer transition-colors hover:bg-whiteHover"
+      >
         <span className="text-main mr-1.5">ონ</span> სერვისი
-      </div>
+      </Link>
       <div className="hidden mobile:flex">
         <ResponsiveNavBar />
       </div>
@@ -259,7 +262,7 @@ const ResponsiveNavBar = () => {
             </Link>
           ))}
         </div>
-        <div className="flex gap-5 flex-col w-[90%] max-w-[320px] mt-auto">
+        <div className="flex gap-5 flex-col absolute w-[90%] max-w-[320px] bottom-10">
           <button className="h-[40px] w-full flex items-center gap-4 bg-[rgba(52,214,117,0.05)] text-[#34D675] rounded-xl font-medium text-[14px]">
             <div className="h-[40px] aspect-square flex justify-center items-center bg-[#34D675] rounded-xl">
               <PhoneIcon className="h-[20px] aspect-square" />

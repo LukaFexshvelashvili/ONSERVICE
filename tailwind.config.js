@@ -30,6 +30,7 @@ export default {
         yellow: "#FFCE1F",
         red: "#F72585",
         lineDecor: "#F4F4F4",
+        lineDecor2: "#F6F6F6",
       },
       boxShadow: {
         def: "0px 4px 30px rgba(0, 0, 0, 0.02)",

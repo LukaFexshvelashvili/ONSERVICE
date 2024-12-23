@@ -42,19 +42,36 @@ export default function Home() {
       </div>
       <div className="line bg-lineDecor h-[2px] w-full my-8"></div>
       <h3 className="text-[20px] text-black2 mb-5">სერვისები</h3>
-      <div className="flex gap-7 my-3 w-full overflow-hidden">
+      <div className="hidescroll flex gap-7 my-3 w-full overflow-hidden ">
         <Card
+          link="/weborder"
           text="შეუკვეთე ვებგვერდი"
           img={WebDeveloping}
           alt="WebDeveloping"
         />
-        <Card text="შეუკვეთე დიზაინი" img={DesignMaking} alt="DesignMaking" />
-        <Card text="შეუკვეთე რეკლამა" img={Advertisement} alt="Advertisement" />
-        <Card text="დაბეჭდე ბანერი/პოსტერი" img={Printing} alt="Printing" />
+        <Card
+          link="/designorder"
+          text="შეუკვეთე დიზაინი"
+          img={DesignMaking}
+          alt="DesignMaking"
+        />
+        <Card
+          link="/adorder"
+          text="შეუკვეთე რეკლამა"
+          img={Advertisement}
+          alt="Advertisement"
+        />
+        <Card
+          link="/printorder"
+          text="დაბეჭდე ბანერი/პოსტერი"
+          img={Printing}
+          alt="Printing"
+        />
       </div>
       <h3 className="text-[20px] text-black2 mb-5 mt-14">პროექტები</h3>
-      <div className="flex gap-7 my-3">
+      <div className="hidescroll flex gap-7 my-3 w-full overflow-hidden ">
         <Card
+          link="https://onhome.ge"
           text="უძრავი ქონების ყიდვა/გაყიდვა"
           img={OnHome}
           alt="OnHome.Ge"

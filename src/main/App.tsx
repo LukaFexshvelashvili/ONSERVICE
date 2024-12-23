@@ -8,6 +8,7 @@ import { Outlet, Route, Routes } from "react-router-dom";
 import Login from "../pages/Authentication/Login";
 import Register from "../pages/Authentication/Register";
 import RecoverPassword from "../pages/Authentication/RecoverPassword";
+import WebOrder from "../pages/WebOrder/WebOrder";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="" element={<Home />} />
           <Route path="profile" element={<Profile />} />
           <Route path="orders" element={<Orders />} />
+          <Route path="weborder" element={<WebOrder />} />
         </Route>
         <Route path="auth/" element={<Authentication />}>
           <Route path="login" element={<Login />} />
@@ -34,7 +36,7 @@ function SideBarLayout() {
   return (
     <>
       <SideBar />
-      <div className="flex flex-col relative py-[25px] px-[25px] flex-1 overflow-hidden w-full mobile:pb-[65px] mobile:px-[10px]">
+      <div className="flex flex-col relative py-[25px] px-[25px] flex-1 overflow-hidden w-full mobile:px-[10px]">
         <NavBar />
         <main className="mt-16 ">
           <Outlet />

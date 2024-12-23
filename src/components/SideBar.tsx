@@ -19,9 +19,6 @@ function SideBar() {
     } else {
       setRowActive(0);
     }
-
-    console.log(location.pathname.includes("/orders"));
-    console.log(rowActive);
   }, [location.pathname]);
 
   return (
@@ -66,7 +63,6 @@ function SideBar() {
           </div>
         </div>
       </div>
-      <MobileBar active={rowActive} setActive={setRowActive} />
     </>
   );
 }
@@ -107,70 +103,3 @@ const firstRow: Trow[] = [
 ];
 
 export default SideBar;
-
-function MobileBar(props: { active: number; setActive: Function }) {
-  return (
-    <div className="mobile:flex fixed z-30 bottom-0 h-[65px] w-full left-0 bg-main hidden justify-between px-8 items-center rounded-t-3xl">
-      <div className="flex gap-4">
-        <Link
-          to={"/profile"}
-          onClick={() => props.setActive(1)}
-          className={` h-[44px] aspect-square rounded-[15px] backdrop-blur-[20px] flex justify-center items-center cursor-pointer transition-all ${
-            props.active == 1 ? "bg-white" : "bg-whiteBg"
-          } backdrop-blur-[20px] flex justify-center items-center cursor-pointer transition-all ${
-            props.active == 1 ? "hover:opacity-90" : "hover:bg-whiteBgHover"
-          }`}
-        >
-          <UserIcon
-            className={`h-[22px] aspect-square ${
-              props.active == 1 ? "[&>path]:fill-main" : "[&>path]:fill-white"
-            }`}
-          />
-        </Link>
-        <Link
-          to={"/orders"}
-          onClick={() => props.setActive(2)}
-          className={` h-[44px] aspect-square rounded-[15px] backdrop-blur-[20px] flex justify-center items-center cursor-pointer transition-all ${
-            props.active == 2 ? "bg-white" : "bg-whiteBg"
-          } backdrop-blur-[20px] flex justify-center items-center cursor-pointer transition-all ${
-            props.active == 2 ? "hover:opacity-90" : "hover:bg-whiteBgHover"
-          }`}
-        >
-          <StackedIcon
-            className={`h-[22px] aspect-square ${
-              props.active == 2 ? "[&>path]:fill-main" : "[&>path]:fill-white"
-            }`}
-          />
-        </Link>
-      </div>
-      <div className="flex gap-4">
-        <Link
-          to={"/"}
-          onClick={() => props.setActive(0)}
-          className={` h-[44px] aspect-square rounded-[15px] backdrop-blur-[20px] flex justify-center items-center cursor-pointer transition-all ${
-            props.active == 0 ? "bg-white" : "bg-whiteBg"
-          } backdrop-blur-[20px] flex justify-center items-center cursor-pointer transition-all ${
-            props.active == 0 ? "hover:opacity-90" : "hover:bg-whiteBgHover"
-          }`}
-        >
-          <Icon
-            className={`h-[22px] [&>rect]:transition-all aspect-square ${
-              props.active == 0 ? "[&>rect]:fill-main" : "[&>rect]:fill-white"
-            }`}
-          />
-        </Link>
-      </div>
-      <div className="flex gap-4">
-        <Link
-          to={"tel:+995598159215"}
-          className="h-[44px] aspect-square rounded-[15px] bg-whiteBg backdrop-blur-[20px] flex justify-center items-center cursor-pointer transition-colors hover:bg-whiteBgHover active:bg-whiteBgActive"
-        >
-          <PhoneIcon className="h-[22px] aspect-square [&>path]:stroke-white" />
-        </Link>
-        <div className="h-[44px] aspect-square rounded-[15px] bg-whiteBg backdrop-blur-[20px] flex justify-center items-center cursor-pointer transition-colors hover:bg-whiteBgHover active:bg-whiteBgActive">
-          <MoonIcon className="h-[22px] aspect-square [&>path]:fill-white" />
-        </div>
-      </div>
-    </div>
-  );
-}

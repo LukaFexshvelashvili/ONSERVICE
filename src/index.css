@@ -27,6 +27,12 @@
   src: url("assets/fonts/capsMedium.woff2");
   font-family: capsMedium;
 }
+.hidescroll {
+  overflow-x: scroll;
+}
+.hidescroll::-webkit-scrollbar {
+  display: none;
+}
 .flickfx {
   -webkit-transform: translateZ(0);
 }
