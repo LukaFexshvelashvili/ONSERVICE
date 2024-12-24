@@ -1,1 +1,27 @@
-{"root":["./src/main.tsx","./src/vite-env.d.ts","./src/assets/decorations/decorations.tsx","./src/assets/icons/icons.tsx","./src/components/navbar.tsx","./src/components/sidebar.tsx","./src/components/globals/card.tsx","./src/components/globals/checkbox.tsx","./src/components/globals/inputblock.tsx","./src/components/globals/outsideclick.tsx","./src/main/app.tsx","./src/pages/authentication/authsidecontent.tsx","./src/pages/authentication/authentication.tsx","./src/pages/authentication/login.tsx","./src/pages/authentication/recoverpassword.tsx","./src/pages/authentication/register.tsx","./src/pages/home/home.tsx","./src/pages/orders/ordercard.tsx","./src/pages/orders/orders.tsx","./src/pages/profile/profile.tsx"],"version":"5.6.3"}
+{
+  "root": [
+    "./src/main.tsx",
+    "./src/vite-env.d.ts",
+    "./src/assets/decorations/decorations.tsx",
+    "./src/assets/icons/icons.tsx",
+    "./src/components/navbar.tsx",
+    "./src/components/sidebar.tsx",
+    "./src/components/globals/card.tsx",
+    "./src/components/globals/checkbox.tsx",
+    "./src/components/globals/inputblock.tsx",
+    "./src/components/globals/outsideclick.tsx",
+    "./src/components/interface/button.tsx",
+    "./src/main/app.tsx",
+    "./src/pages/authentication/authsidecontent.tsx",
+    "./src/pages/authentication/authentication.tsx",
+    "./src/pages/authentication/login.tsx",
+    "./src/pages/authentication/recoverpassword.tsx",
+    "./src/pages/authentication/register.tsx",
+    "./src/pages/home/home.tsx",
+    "./src/pages/orders/ordercard.tsx",
+    "./src/pages/orders/orders.tsx",
+    "./src/pages/profile/profile.tsx",
+    "./src/pages/weborder/weborder.tsx"
+  ],
+  "version": "5.6.3"
+}

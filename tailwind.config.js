@@ -21,6 +21,10 @@ export default {
         inputLabel: "rgba(73, 73, 73, 0.6)",
         desc: "rgba(73, 73, 73, 0.6)",
         white: "#FFFFFF",
+        whiteOpacity: "rgb(255, 255, 255, 0.15)",
+        whiteOpacityHover: "rgb(255, 255, 255, 0.20)",
+        whiteClear: "#f9f9f9",
+        whiteClearHover: "#f5f5f5",
         whiteHover: "#fcfcfc",
         whiteDecorBg: "rgba(255, 255, 255, 0.15)",
         whiteBg: "rgba(255, 255, 255, 0.15)",
@@ -30,10 +34,11 @@ export default {
         yellow: "#FFCE1F",
         red: "#F72585",
         lineDecor: "#F4F4F4",
-        lineDecor2: "#F6F6F6",
+        lineDecor2: "#f0f0f0",
       },
       boxShadow: {
         def: "0px 4px 30px rgba(0, 0, 0, 0.02)",
+        defHover: "0px 6px 30px rgba(0, 0, 0, 0.04)",
         defH: "0px 4px 25px rgba(0, 0, 0, 0.08)",
       },
       fontFamily: {
@@ -43,6 +48,7 @@ export default {
         capsMedium: "capsMedium",
         bpg: "bpg",
         bpgcaps: "bpgcaps",
+        poppinsRegular: "poppinsRegular",
       },
       borderRadius: {
         info: "15px",
